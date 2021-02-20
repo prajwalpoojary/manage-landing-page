@@ -14,8 +14,174 @@ body {
   padding: 0;
   line-height: 1.6;
   font-size: 16px;
-  font-weight: 400;
   font-family: 'Be Vietnam', sans-serif;
   color: #9095a7;
   background-color: #fafafa;
+}
+
+ul {
+  padding: 0;
+  list-style-type: none;
+}
+
+h1,
+h2,
+h3 {
+  margin-bottom: 0.75rem;
+  line-height: 1.2;
+  font-weight: 700;
+  color: #242d52;
+}
+
+p {
+  margin-bottom: 1.25rem;
+  font-weight: 400;
+  color: #9095a7;
+}
+
+a {
+  font-weight: 500;
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.6rem 1.5rem;
+  border-radius: 50px;
+  cursor: pointer;
+  box-shadow: 0 3px 10px #f25f3a;
+  transition: opacity 300ms ease-in-out;
+}
+
+.btn-primary {
+  background: #f25f3a;
+  color: #fafafa;
+}
+
+.btn-primary:hover {
+  opacity: 0.8;
+}
+
+.container {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.header {
+  background: url("../../images/bg-tablet-pattern.svg") no-repeat top center/cover;
+  padding: 2rem 0;
+  min-height: 100vh;
+}
+
+@media (max-width: 39.9375em) {
+  .header.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #fafafa;
+    background: linear-gradient(0deg, #1d1e25, transparent);
+  }
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+
+.nav__item {
+  display: none;
+}
+
+@media (min-width: 40em) {
+  .nav__item {
+    display: flex;
+  }
+}
+
+.nav__item-link {
+  font-weight: 500;
+  color: #242d52;
+  transition: color 300ms ease-in-out;
+}
+
+@media (min-width: 40em) {
+  .nav__item-link {
+    padding: 0 0.5rem;
+  }
+}
+
+.nav__item-link:hover {
+  color: #9095a7;
+}
+
+@media (max-width: 39.9375em) {
+  .nav__item.active {
+    display: block;
+    position: absolute;
+    top: 2.5rem;
+    left: 50%;
+    width: 100%;
+    padding: 2rem;
+    border-radius: 10px;
+    transform: translateX(-50%);
+    background: #fafafa;
+    text-align: center;
+  }
+  .nav__item.active .nav__item-link {
+    display: inline-block;
+    padding: 0.8rem 0;
+  }
+}
+
+.nav__toggler {
+  height: 29px;
+  cursor: pointer;
+}
+
+@media (min-width: 40em) {
+  .nav__toggler {
+    display: none;
+  }
+}
+
+.nav__toggler > span {
+  display: block;
+  height: 3px;
+  width: 25px;
+  background-color: #242d52;
+}
+
+.nav__toggler > span:not(:last-child) {
+  margin-bottom: 3px;
+}
+
+.nav__toggler.active > span:nth-child(1) {
+  transform: rotate(45deg) translate(8px, 6px);
+}
+
+.nav__toggler.active > span:nth-child(2) {
+  opacity: 0;
+}
+
+.nav__toggler.active > span:nth-child(3) {
+  transform: rotate(-45deg) translate(3px, 0px);
+}
+
+.nav .btn {
+  display: none;
+}
+
+@media (min-width: 40em) {
+  .nav .btn {
+    display: inline-block;
+  }
 }
