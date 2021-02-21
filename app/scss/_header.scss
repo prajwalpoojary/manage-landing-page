@@ -1,19 +1,28 @@
-.header {
-  background: url('../../images/bg-tablet-pattern.svg') no-repeat top center /
-    cover;
-  padding: 2rem 0;
-  min-height: 100vh;
-
+body {
   @include breakpoint-down('small') {
     &.overlay {
-      position: fixed;
+      position: relative;
       top: 0;
       left: 0;
       right: 0;
       bottom: 0;
+      min-height: 100vh;
       background-color: $veryLightGray;
       background: linear-gradient(0deg, $veryDarkBlue, transparent);
+      transition: all 300ms ease-in-out;
     }
+  }
+}
+
+.header {
+  padding: 2rem 0;
+  background: url('../../images/bg-tablet-pattern.svg') no-repeat;
+  background-size: 100%;
+  background-position: 145px -225px;
+
+  @include breakpoint-up('medium') {
+    background-size: 80%;
+    background-position: 425px -115px;
   }
 }
 
@@ -23,10 +32,11 @@
   align-items: center;
   position: relative;
 
-  //   Mobile Menu
+  // Menu
   &__item {
     display: none;
 
+    // Desktop Menu
     @include breakpoint-up('medium') {
       display: flex;
     }
@@ -45,6 +55,7 @@
       }
     }
 
+    //   Mobile Menu on active
     &.active {
       @include breakpoint-down('small') {
         display: block;
@@ -66,7 +77,7 @@
     }
   }
 
-  // Mobile Toggle Menu
+  // Mobile Toggle
   &__toggler {
     height: 29px;
     cursor: pointer;
@@ -80,6 +91,7 @@
       height: 3px;
       width: 25px;
       background-color: $darkBlue;
+      transition: transform 300ms ease-in-out;
 
       &:not(:last-child) {
         margin-bottom: 3px;
