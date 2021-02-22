@@ -14,7 +14,7 @@
   .container {
     @include breakpoint-up('medium') {
       display: grid;
-      grid-template-columns: 45% 45%;
+      grid-template-columns: repeat(2, 1fr);
       gap: 30px;
       align-items: flex-start;
       justify-content: space-between;

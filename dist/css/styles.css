@@ -272,7 +272,7 @@ img {
 @media (min-width: 48.75em) {
   .hero {
     display: grid;
-    grid-template-columns: 45% 45%;
+    grid-template-columns: repeat(2, 1fr);
     gap: 30px;
     align-items: center;
     justify-content: space-between;
@@ -337,7 +337,7 @@ img {
 @media (min-width: 48.75em) {
   .features .container {
     display: grid;
-    grid-template-columns: 45% 45%;
+    grid-template-columns: repeat(2, 1fr);
     gap: 30px;
     align-items: flex-start;
     justify-content: space-between;
@@ -392,7 +392,7 @@ img {
 }
 
 .testimonials {
-  padding: 1rem 0 2rem;
+  padding: 1rem 0 5rem;
   text-align: center;
 }
 
@@ -439,4 +439,36 @@ img {
 
 .testimonials .testimonial__text p {
   width: 100%;
+}
+
+.cta {
+  padding: 4rem 0;
+  background: #f25f3a;
+  text-align: center;
+}
+
+@media (min-width: 48.75em) {
+  .cta {
+    padding: 2.5rem 0;
+    text-align: left;
+  }
+}
+
+@media (min-width: 48.75em) {
+  .cta .container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    align-items: center;
+  }
+}
+
+.cta h2 {
+  color: #fafafa;
+}
+
+.cta .btn {
+  background: #fafafa;
+  color: #f25f3a;
+  justify-self: end;
 }

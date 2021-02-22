@@ -1,0 +1,29 @@
+.cta {
+  padding: 4rem 0;
+  background: $brightRed;
+  text-align: center;
+
+  @include breakpoint-up('medium') {
+    padding: 2.5rem 0;
+    text-align: left;
+  }
+
+  .container {
+    @include breakpoint-up('medium') {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 30px;
+      align-items: center;
+    }
+  }
+
+  h2 {
+    color: $veryLightGray;
+  }
+
+  .btn {
+    background: $veryLightGray;
+    color: $brightRed;
+    justify-self: end;
+  }
+}
