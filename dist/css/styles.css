@@ -16,7 +16,7 @@ body {
   font-size: 16px;
   font-family: 'Be Vietnam', sans-serif;
   color: #9095a7;
-  background-color: #fafafa;
+  background-color: #fff;
   overflow-x: hidden;
 }
 
@@ -83,6 +83,12 @@ h3 {
 }
 
 p {
+  margin-bottom: 1.5rem;
+  font-weight: 400;
+  color: #9095a7;
+}
+
+p {
   font-size: 1.2rem;
 }
 
@@ -98,12 +104,6 @@ p {
     font-size: 1.4rem;
     width: 80%;
   }
-}
-
-p {
-  margin-bottom: 1.5rem;
-  font-weight: 400;
-  color: #9095a7;
 }
 
 a {
@@ -318,14 +318,14 @@ img {
   }
 }
 
-.btn {
-  box-shadow: none;
-}
-
 .features {
   padding: 2rem 0;
   text-align: center;
   overflow: hidden;
+}
+
+.features .btn {
+  box-shadow: none;
 }
 
 @media (min-width: 48.75em) {
@@ -389,4 +389,54 @@ img {
   .features__items > li h3 :nth-child(2) {
     padding: 0.7rem 2rem;
   }
+}
+
+.testimonials {
+  padding: 1rem 0 2rem;
+  text-align: center;
+}
+
+.testimonials__title {
+  margin-bottom: 3rem;
+  padding: 0 1rem;
+}
+
+@media (min-width: 48.75em) {
+  .testimonials .container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+    align-items: center;
+  }
+}
+
+.testimonials .testimonial {
+  position: relative;
+  padding: 1rem;
+  margin: 8rem 0;
+  background-color: #fafafa;
+}
+
+@media (min-width: 48.75em) {
+  .testimonials .testimonial {
+    margin: 6rem 0;
+  }
+  .testimonials .testimonial :first-child::after {
+    content: '';
+    background: url("../../images/illustration-intro.svg") no-repeat;
+  }
+}
+
+.testimonials .testimonial__img {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.testimonials .testimonial__text {
+  margin-top: 6rem;
+}
+
+.testimonials .testimonial__text p {
+  width: 100%;
 }

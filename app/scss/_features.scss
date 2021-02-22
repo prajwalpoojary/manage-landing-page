@@ -1,11 +1,11 @@
-.btn {
-  box-shadow: none;
-}
-
 .features {
   padding: 2rem 0;
   text-align: center;
   overflow: hidden;
+
+  .btn {
+    box-shadow: none;
+  }
 
   @include breakpoint-up('medium') {
     text-align: left;
