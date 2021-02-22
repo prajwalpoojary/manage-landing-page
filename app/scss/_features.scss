@@ -1,0 +1,68 @@
+.btn {
+  box-shadow: none;
+}
+
+.features {
+  padding: 2rem 0;
+  text-align: center;
+  overflow: hidden;
+
+  @include breakpoint-up('medium') {
+    text-align: left;
+  }
+
+  .container {
+    @include breakpoint-up('medium') {
+      display: grid;
+      grid-template-columns: 45% 45%;
+      gap: 30px;
+      align-items: flex-start;
+      justify-content: space-between;
+    }
+  }
+
+  // &__title {
+  // }
+
+  &__items {
+    margin-top: 3rem;
+    text-align: left;
+
+    @include breakpoint-up('medium') {
+      margin-top: 0;
+    }
+
+    > li {
+      margin-top: 1rem;
+      position: relative;
+
+      @include breakpoint-up('medium') {
+        margin-top: 0;
+        padding-left: 7rem;
+      }
+
+      span {
+        position: absolute;
+
+        @include breakpoint-up('medium') {
+          left: 0;
+          top: -5px;
+        }
+      }
+
+      @include breakpoint-down('small') {
+        h3 {
+          position: relative;
+          z-index: -1;
+          right: -44px;
+          padding: 0.8rem 2rem;
+          background-color: $veryPaleRed;
+
+          :nth-child(2) {
+            padding: 0.7rem 2rem;
+          }
+        }
+      }
+    }
+  }
+}
