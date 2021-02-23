@@ -1,0 +1,142 @@
+.footer {
+  padding: 3rem 0;
+  background: $veryDarkBlue;
+  text-align: center;
+
+  .container {
+    display: flex;
+    flex-direction: column-reverse;
+
+    > * {
+      margin: 1rem 0;
+    }
+  }
+
+  @include breakpoint-up('medium') {
+    .container {
+      flex-direction: row;
+
+      > * {
+        margin: 1rem 0;
+      }
+    }
+  }
+
+  @include breakpoint-up('medium') {
+    .container {
+      justify-content: space-between;
+      align-items: flex-start;
+    }
+  }
+
+  &__logo {
+    display: flex;
+    flex-direction: column-reverse;
+
+    @include breakpoint-up('medium') {
+      flex-direction: column;
+    }
+
+    &-main {
+      margin-bottom: 2.3rem;
+
+      @include breakpoint-down('small') {
+        margin: 2.3rem 0 0 0;
+      }
+    }
+
+    &-social {
+      transition: fill 300ms ease-in-out;
+
+      > a:not(:last-child) {
+        padding-right: 0.5rem;
+      }
+
+      svg:hover path {
+        fill: $brightRed;
+      }
+    }
+  }
+
+  &__items {
+    display: flex;
+    justify-content: space-around;
+
+    @include breakpoint-up('medium') {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 30px;
+    }
+  }
+
+  &__item {
+    text-align: center;
+
+    @include breakpoint-up('medium') {
+      text-align: left;
+    }
+
+    a {
+      color: $veryLightGray;
+      transition: color 300ms ease-in-out;
+
+      &:hover {
+        color: $brightRed;
+      }
+    }
+  }
+
+  &__form {
+    form {
+      width: 100%;
+    }
+
+    input[type='email'],
+    input[type='submit'] {
+      padding: 0.6rem 1.5rem;
+      border: none;
+      border-radius: 50px;
+    }
+
+    input[type='submit'] {
+      background: $brightRed;
+      color: $veryLightGray;
+      cursor: pointer;
+      opacity: 1;
+      transition: opacity 300ms ease-in-out;
+
+      &:hover {
+        opacity: 0.8;
+      }
+    }
+
+    @include breakpoint-up('medium') {
+      input[type='email'],
+      input[type='submit'] {
+        padding: 0.6rem 1.5rem;
+        border: none;
+        border-radius: 50px;
+      }
+
+      input[type='submit'] {
+        background: $brightRed;
+        color: $veryLightGray;
+        cursor: pointer;
+        opacity: 1;
+        transition: opacity 300ms ease-in-out;
+
+        &:hover {
+          opacity: 0.8;
+        }
+      }
+    }
+  }
+
+  p {
+    margin: 0;
+    font-size: 1rem;
+    @include breakpoint-up('medium') {
+      display: none;
+    }
+  }
+}

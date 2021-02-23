@@ -21,6 +21,7 @@ body {
 }
 
 ul {
+  margin: 0;
   padding: 0;
   list-style-type: none;
 }
@@ -162,7 +163,7 @@ img {
 
 @media (min-width: 48.75em) {
   .header {
-    background-size: 80%;
+    background-size: 100%;
     background-position: 425px -115px;
   }
 }
@@ -471,4 +472,153 @@ img {
   background: #fafafa;
   color: #f25f3a;
   justify-self: end;
+}
+
+.footer {
+  padding: 3rem 0;
+  background: #1d1e25;
+  text-align: center;
+}
+
+.footer .container {
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+.footer .container > * {
+  margin: 1rem 0;
+}
+
+@media (min-width: 48.75em) {
+  .footer .container {
+    flex-direction: row;
+  }
+  .footer .container > * {
+    margin: 1rem 0;
+  }
+}
+
+@media (min-width: 48.75em) {
+  .footer .container {
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+}
+
+.footer__logo {
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+@media (min-width: 48.75em) {
+  .footer__logo {
+    flex-direction: column;
+  }
+}
+
+.footer__logo-main {
+  margin-bottom: 2.3rem;
+}
+
+@media (max-width: 48.6875em) {
+  .footer__logo-main {
+    margin: 2.3rem 0 0 0;
+  }
+}
+
+.footer__logo-social {
+  transition: fill 300ms ease-in-out;
+}
+
+.footer__logo-social > a:not(:last-child) {
+  padding-right: 0.5rem;
+}
+
+.footer__logo-social svg:hover path {
+  fill: #f25f3a;
+}
+
+.footer__items {
+  display: flex;
+  justify-content: space-around;
+}
+
+@media (min-width: 48.75em) {
+  .footer__items {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+  }
+}
+
+.footer__item {
+  text-align: center;
+}
+
+@media (min-width: 48.75em) {
+  .footer__item {
+    text-align: left;
+  }
+}
+
+.footer__item a {
+  color: #fafafa;
+  transition: color 300ms ease-in-out;
+}
+
+.footer__item a:hover {
+  color: #f25f3a;
+}
+
+.footer__form form {
+  width: 100%;
+}
+
+.footer__form input[type='email'],
+.footer__form input[type='submit'] {
+  padding: 0.6rem 1.5rem;
+  border: none;
+  border-radius: 50px;
+}
+
+.footer__form input[type='submit'] {
+  background: #f25f3a;
+  color: #fafafa;
+  cursor: pointer;
+  opacity: 1;
+  transition: opacity 300ms ease-in-out;
+}
+
+.footer__form input[type='submit']:hover {
+  opacity: 0.8;
+}
+
+@media (min-width: 48.75em) {
+  .footer__form input[type='email'],
+  .footer__form input[type='submit'] {
+    padding: 0.6rem 1.5rem;
+    border: none;
+    border-radius: 50px;
+  }
+  .footer__form input[type='submit'] {
+    background: #f25f3a;
+    color: #fafafa;
+    cursor: pointer;
+    opacity: 1;
+    transition: opacity 300ms ease-in-out;
+  }
+  .footer__form input[type='submit']:hover {
+    opacity: 0.8;
+  }
+}
+
+.footer p {
+  margin: 0;
+  font-size: 1rem;
+}
+
+@media (min-width: 48.75em) {
+  .footer p {
+    display: none;
+  }
 }
