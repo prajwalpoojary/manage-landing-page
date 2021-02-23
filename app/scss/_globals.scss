@@ -118,9 +118,27 @@ img {
   }
 }
 
+// Flex
+.flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &-jcsb {
+    justify-content: space-between;
+  }
+}
+
+// Grid
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 30px;
+}
+
 // Container
 .container {
   max-width: 1440px;
   margin: 0 auto;
-  padding: 0 1rem;
+  padding: 0 2rem;
 }

@@ -10,9 +10,7 @@
 
   .container {
     @include breakpoint-up('medium') {
-      display: grid;
       grid-template-columns: repeat(2, 1fr);
-      gap: 30px;
       align-items: center;
     }
   }

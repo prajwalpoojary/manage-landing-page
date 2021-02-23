@@ -9,22 +9,17 @@
 
   @include breakpoint-up('medium') {
     .container {
-      display: grid;
       grid-template-columns: repeat(4, 1fr);
-      gap: 15px;
-      align-items: center;
     }
   }
 
   .testimonial {
     position: relative;
     padding: 1rem;
-    margin: 8rem 0;
+    margin: 4rem 0;
     background-color: $veryLightGray;
 
     @include breakpoint-up('medium') {
-      margin: 6rem 0;
-
       :first-child::after {
         content: '';
         background: url('../../images/illustration-intro.svg') no-repeat;

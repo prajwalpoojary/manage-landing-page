@@ -21,15 +21,11 @@ body {
   background-position: 145px -225px;
 
   @include breakpoint-up('medium') {
-    background-size: 100%;
     background-position: 425px -115px;
   }
 }
 
 .nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
   position: relative;
 
   // Menu

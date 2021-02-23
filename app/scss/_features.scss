@@ -13,27 +13,18 @@
 
   .container {
     @include breakpoint-up('medium') {
-      display: grid;
       grid-template-columns: repeat(2, 1fr);
-      gap: 30px;
-      align-items: flex-start;
-      justify-content: space-between;
     }
   }
 
-  // &__title {
-  // }
-
   &__items {
-    margin-top: 3rem;
     text-align: left;
 
     @include breakpoint-up('medium') {
-      margin-top: 0;
+      margin-top: 10px;
     }
 
     > li {
-      margin-top: 1rem;
       position: relative;
 
       @include breakpoint-up('medium') {
