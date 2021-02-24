@@ -223,8 +223,11 @@
         </ul>
       </div>
       <div class="footer__form">
-        <form>
-          <input type="email" name="email" placeholder="Updates in your inbox…" required />
+        <form novalidate>
+          <label for="mail">
+            <input type="email" id="mail" name="mail" placeholder="Updates in your inbox…" required minlength="8"/>
+            <span class="error" aria-live="polite"></span>
+          </label>
           <input type="submit" value="Go" />
         </form>
       </div>
