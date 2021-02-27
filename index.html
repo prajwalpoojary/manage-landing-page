@@ -7,8 +7,13 @@
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
 
   <!-- Fonts -->
-  <!-- <link rel="preconnect" href="https://fonts.gstatic.com">
-  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam:wght@400;500;700&display=swap" rel="stylesheet"> -->
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam:wght@400;500;700&display=swap" rel="stylesheet">
+
+  <!-- Fontawesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
+    integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w=="
+    crossorigin="anonymous" />
 
   <!-- Stylesheet -->
   <link rel="stylesheet" href="dist/css/styles.css">
@@ -104,47 +109,53 @@
   <!-- Testimonial -->
   <section class="testimonials">
     <h2 class="testimonials__title">What they’ve said</h2>
-    <div class="container grid">
-      <div class="testimonial">
-        <div class="testimonial__img">
-          <img src="images/avatar-anisha.png" alt="testimonial image">
-        </div>
-        <div class="testimonial__text">
-          <h3>Anisha Li</h3>
-          <p>“Manage has supercharged our team’s workflow. The ability to maintain
-            visibility on larger milestones at all times keeps everyone motivated.”</p>
-        </div>
+    <div class="testimonial carousel">
+      <button class="carousel__button carousel__button--left is-hidden"><i class="fas fa-chevron-left"></i></button>
+      <div class="carousel__track-container">
+        <ul class="carousel__track">
+          <li class="carousel__slide current-slide">
+            <img class="testimonial__img carousel__img" src="images/avatar-anisha.png" alt="testimonial image">
+            <div class="testimonial__text carousel__text">
+              <h3>Anisha Li</h3>
+              <p>“Manage has supercharged our team’s workflow. The ability to maintain
+                visibility on larger milestones at all times keeps everyone motivated.”</p>
+            </div>
+          </li>
+          <li class="carousel__slide">
+            <img class="testimonial__img carousel__img" src="images/avatar-ali.png" alt="testimonial image">
+            <div class="testimonial__text carousel__text">
+              <h3>Bravo Ali</h3>
+              <p>“We have been able to cancel so many other subscriptions since using Manage. There is no more cross-channel confusion
+              and everyone is much more focused.”</p>
+            </div>
+          </li>
+          <li class="carousel__slide">
+            <img class="testimonial__img carousel__img" src="images/avatar-richard.png" alt="testimonial image">
+            <div class="testimonial__text carousel__text">
+              <h3>Richard Watts</h3>
+              <p>“Manage has supercharged our team’s workflow. The ability to maintain visibility on larger milestones at all times keeps
+              everyone motivated.”</p>
+            </div>
+          </li>
+          <li class="carousel__slide">
+            <img class="testimonial__img carousel__img" src="images/avatar-shanai.png" alt="testimonial image">
+            <div class="testimonial__text carousel__text">
+              <h3>Shanai Gough</h3>
+              <p>“Their software allows us to track, manage and collaborate on our projects
+              from anywhere. It keeps the whole team in-sync without being intrusive.”</p>
+            </div>
+          </li>
+        </ul>
       </div>
-      <div class="testimonial">
-        <div class="testimonial__img">
-          <img src="images/avatar-ali.png" alt="testimonial image">
-        </div>
-        <div class="testimonial__text">
-          <h3>Bravo Ali</h3>
-          <p>“We have been able to cancel so many other subscriptions since using Manage. There is no more cross-channel confusion and everyone is much more focused.”</p>
-        </div>
-      </div>
-      <div class="testimonial">
-        <div class="testimonial__img">
-          <img src="images/avatar-richard.png" alt="testimonial image">
-        </div>
-        <div class="testimonial__text">
-          <h3>Richard Watts</h3>
-          <p>“Manage has supercharged our team’s workflow. The ability to maintain visibility on larger milestones at all times keeps everyone motivated.”</p>
-        </div>
-      </div>
-      <div class="testimonial">
-        <div class="testimonial__img">
-          <img src="images/avatar-shanai.png" alt="testimonial image">
-        </div>
-        <div class="testimonial__text">
-          <h3>Shanai Gough</h3>
-          <p>“Their software allows us to track, manage and collaborate on our projects
-          from anywhere. It keeps the whole team in-sync without being intrusive.”</p>
-        </div>
+      <button class="carousel__button carousel__button--right"><i class="fas fa-chevron-right"></i></button>
+
+      <div class="carousel__nav">
+        <div class="carousel__indicator current-slide"></div>
+        <div class="carousel__indicator"></div>
+        <div class="carousel__indicator"></div>
+        <div class="carousel__indicator"></div>
       </div>
     </div>
-    <a class="btn btn-primary" href="#">Get Started</a>
   </section>
 
   <!-- Cta -->
@@ -239,7 +250,7 @@
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
     Coded by <a href="#">Prajwal</a>.
   </div>
-
+  
   <script src="app/js/app.js"></script>
 </body>
 </html>
