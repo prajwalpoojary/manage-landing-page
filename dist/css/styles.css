@@ -517,7 +517,7 @@ img {
 .cta .btn {
   background: #fafafa;
   color: #f25f3a;
-  justify-self: center;
+  justify-self: end;
 }
 
 .footer {
