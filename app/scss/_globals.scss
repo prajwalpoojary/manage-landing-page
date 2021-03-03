@@ -83,10 +83,12 @@ p {
   @include breakpoint-up('large') {
     font-size: 1.3rem;
     width: 90%;
+    // margin: auto;
   }
   @include breakpoint-up('large') {
     font-size: 1.4rem;
     width: 80%;
+    // margin: auto;
   }
 }
 

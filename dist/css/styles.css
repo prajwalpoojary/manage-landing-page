@@ -421,7 +421,6 @@ img {
 .testimonials .carousel {
   position: relative;
   width: 300px;
-  height: 389px;
   margin: 0 auto 2rem;
 }
 
@@ -437,7 +436,7 @@ img {
 
 .testimonials .carousel__track-container {
   position: relative;
-  height: 100%;
+  height: 500px;
   overflow: hidden;
 }
 
@@ -456,8 +455,25 @@ img {
   transform: translate(-50%, -50%);
 }
 
+.testimonials .carousel__text {
+  background-color: #fafafa;
+  padding-bottom: 3rem;
+}
+
 .testimonials .carousel__text h3 {
   margin-top: 6rem;
+}
+
+@media (min-width: 64em) {
+  .testimonials .carousel__text p {
+    margin: auto;
+  }
+}
+
+@media (min-width: 64em) {
+  .testimonials .carousel__text p {
+    margin: auto;
+  }
 }
 
 .testimonials .carousel__button {
@@ -517,7 +533,13 @@ img {
 .cta .btn {
   background: #fafafa;
   color: #f25f3a;
-  justify-self: end;
+  justify-self: center;
+}
+
+@media (min-width: 48.75em) {
+  .cta .btn {
+    justify-self: end;
+  }
 }
 
 .footer {

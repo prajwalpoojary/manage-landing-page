@@ -22,6 +22,10 @@
   .btn {
     background: $veryLightGray;
     color: $brightRed;
-    justify-self: end;
+    justify-self: center;
+
+    @include breakpoint-up('medium') {
+      justify-self: end;
+    }
   }
 }
